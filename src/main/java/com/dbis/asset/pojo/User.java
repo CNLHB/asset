@@ -29,7 +29,6 @@ public class User implements Serializable {
     private String userNewpassword;
 
 //    private Device device;
-/*
     public Integer getId() {
         return id;
     }
@@ -178,5 +177,5 @@ public class User implements Serializable {
                 ", userHobby='" + userHobby + '\'' +
                 ", userNewpassword='" + userNewpassword + '\'' +
                 '}';
-    }*/
+    }
 }

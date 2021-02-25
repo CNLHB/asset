@@ -17,6 +17,7 @@ public interface UserMapper {
      * TODO 条件查询指定用户
      */
 
+
     List<User> queryUserSingleCondition(User user);
     /**
      * TODO 查询用户总数

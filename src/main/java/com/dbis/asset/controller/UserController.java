@@ -46,7 +46,7 @@ public class UserController {
      * @Param [user]
      * @return java.util.Map<java.lang.String,java.lang.Object>
      **/
-    @GetMapping("/register")
+    @PostMapping("/register")
     public Map<String, Object> register(User user){
         Map<String, Object> map = new HashMap<>();
         Integer i = userService.register(user);
@@ -86,7 +86,7 @@ public class UserController {
      * @Param [user]
      * @return java.util.Map<java.lang.String,java.lang.Object>
      **/
-    @GetMapping("/login")
+    @PostMapping("/login")
     public Map<String, Object> login(User user){
         Map<String, Object> map = new HashMap<>();
         Integer i = userService.login(user);
@@ -107,6 +107,13 @@ public class UserController {
         return map;
     }
 
+
+    @PostMapping("/logintest")
+    public String testDemo(User user1){
+        user = user1;
+        System.out.println(user.getUserName()+","+user.getUserPassword());
+        return "aaa";
+    }
     //-------------------------------------------------
     /*
      * @Description //TODO 查询所有用户(分页)
